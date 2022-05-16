@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".main.searchhome.VenueResultsModule.VenueResults">
+
+
+    <com.meetingselect.meetingselect.HelperClasses.CustomScrollView
+        android:id="@+id/customScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/venueresults_holderofall_constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/venueresults_shimmerlayout_shimmerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/venueresults_filterlayout_constraintlayout">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_layout_venueresults" />
+
+                    <include layout="@layout/shimmer_layout_venueresults" />
+
+                    <include layout="@layout/shimmer_layout_venueresults" />
+
+                    <include layout="@layout/shimmer_layout_venueresults" />
+
+                    <include layout="@layout/shimmer_layout_venueresults" />
+
+                    <include layout="@layout/shimmer_layout_venueresults" />
+
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/venueresults_recyclerviewholder_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/venueresults_filterlayout_constraintlayout"
+                tools:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/venueresults_instantbookablevenues_recyclerview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/venueresults_results_recyclerview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueresults_instantbookablevenues_recyclerview">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/venueresults_filterlayout_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/search_engine_shape"
+                android:theme="@style/Theme.MeetingSelect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venueresults_searchlocationlayout_constraintlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/search_for_location_shape"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/venueresults_searchicon_imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_baseline_search_24_gray"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueresults_searchlocationlayout_constraintlayout"
+                        app:layout_constraintStart_toStartOf="@+id/venueresults_searchlocationlayout_constraintlayout"
+                        app:layout_constraintTop_toTopOf="@+id/venueresults_searchlocationlayout_constraintlayout" />
+
+                    <TextView
+                        android:id="@+id/venueresults_search_venue_keyword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Search for City, State, Address"
+                        android:textColor="@color/meetingSelectBlue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueresults_searchlocationlayout_constraintlayout"
+                        app:layout_constraintEnd_toEndOf="@+id/venueresults_searchlocationlayout_constraintlayout"
+                        app:layout_constraintStart_toEndOf="@+id/venueresults_searchicon_imageview"
+                        app:layout_constraintTop_toTopOf="@+id/venueresults_searchlocationlayout_constraintlayout" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venueresults_datechooserlayout_constraintlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/search_for_location_shape"
+                    app:layout_constraintEnd_toStartOf="@+id/venueresults_guestchooserlayout_constraintlayout"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueresults_searchlocationlayout_constraintlayout">
+
+                    <ImageView
+                        android:id="@+id/venueresults_calendericon_imageview"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_baseline_calendar_today_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueresults_datechooserlayout_constraintlayout"
+                        app:layout_constraintStart_toStartOf="@+id/venueresults_datechooserlayout_constraintlayout"
+                        app:layout_constraintTop_toTopOf="@+id/venueresults_datechooserlayout_constraintlayout" />
+
+                    <TextView
+                        android:id="@+id/venueresults_date_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text=""
+                        android:textColor="@color/meetingSelectBlue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueresults_datechooserlayout_constraintlayout"
+                        app:layout_constraintEnd_toEndOf="@+id/venueresults_datechooserlayout_constraintlayout"
+                        app:layout_constraintStart_toEndOf="@+id/venueresults_calendericon_imageview"
+                        app:layout_constraintTop_toTopOf="@+id/venueresults_datechooserlayout_constraintlayout" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venueresults_guestchooserlayout_constraintlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/search_for_location_shape"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusedByDefault="false"
+                    android:inputType="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/venueresults_datechooserlayout_constraintlayout"
+                    app:layout_constraintTop_toBottomOf="@+id/venueresults_searchlocationlayout_constraintlayout">
+
+
+                    <ImageView
+                        android:id="@+id/venueresults_peopleicon_imageview"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_baseline_group_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueresults_guestchooserlayout_constraintlayout"
+                        app:layout_constraintStart_toStartOf="@+id/venueresults_guestchooserlayout_constraintlayout"
+                        app:layout_constraintTop_toTopOf="@+id/venueresults_guestchooserlayout_constraintlayout" />
+
+                    <TextView
+                        android:id="@+id/venueresults_attendeescount_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="3"
+                        android:textColor="@color/meetingSelectBlue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueresults_guestchooserlayout_constraintlayout"
+                        app:layout_constraintStart_toEndOf="@+id/venueresults_peopleicon_imageview"
+                        app:layout_constraintTop_toTopOf="@+id/venueresults_guestchooserlayout_constraintlayout" />
+
+                    <TextView
+                        android:id="@+id/venueresults_attendeesstring_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:text="Guests"
+                        android:textColor="@color/meetingSelectBlue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueresults_guestchooserlayout_constraintlayout"
+                        app:layout_constraintStart_toEndOf="@+id/venueresults_attendeescount_textview"
+                        app:layout_constraintTop_toTopOf="@+id/venueresults_guestchooserlayout_constraintlayout" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Spinner
+                    android:id="@+id/venueresults_typeofbooking_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/spinner_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueresults_datechooserlayout_constraintlayout" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.meetingselect.meetingselect.HelperClasses.CustomScrollView>
+
+    <TextView
+        android:id="@+id/noresults_venueresults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="No Results Found"
+        android:textColor="@color/grey"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reload_button_venueresults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/lightBlue"
+        android:text="Back to Homepage"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noresults_venueresults" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

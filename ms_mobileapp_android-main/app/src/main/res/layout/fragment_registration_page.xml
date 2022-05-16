@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registration_registrationheadlayoutconstraintlayout_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".main.profile.Account.RegistrationMS4.RegistrationPage">
+
+    <ImageView
+        android:id="@+id/registration_backgroundimage_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/meetingselect_mainbackgroundimage"
+        app:layout_constraintBottom_toTopOf="@+id/registration_guideline2_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48000002" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/registration_registrationformlayout_constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/loginpage_custom_constraintlayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="• Min 8 char.- Max 20 char."
+            android:textColor="@color/lightBlue"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_password_textview"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_password_textview" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="• Number"
+            android:textColor="@color/lightBlue"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview4"
+            app:layout_constraintTop_toTopOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview4" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="• Special Character"
+            android:textColor="@color/lightBlue"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview2"
+            app:layout_constraintStart_toEndOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview2"
+            app:layout_constraintTop_toTopOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview2" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="• Uppercase"
+            android:textColor="@color/lightBlue"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview"
+            app:layout_constraintStart_toEndOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview"
+            app:layout_constraintTop_toTopOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_phonenumber_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Phone Number"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_password_textview"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_password_editext" />
+
+        <EditText
+            android:id="@+id/registration_registrationpage_phonenumber_editext"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/edittext_customlayout_loginpage"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColorHint="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_phonenumber_textview"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_phonenumber_textview" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_companyname_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Company Name"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_firstname_textview"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_firstname_editext" />
+
+        <EditText
+            android:id="@+id/registration_registrationpage_companyname_editext"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/edittext_customlayout_loginpage"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Company Name"
+            android:inputType="textEmailAddress"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColorHint="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_companyname_textview"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_companyname_textview" />
+
+        <EditText
+            android:id="@+id/registration_registrationpage_password_editext"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/edittext_customlayout_loginpage"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColorHint="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_emailaddress_editext"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_passwordrestrictionsmincharacternmb_textview3" />
+
+        <EditText
+            android:id="@+id/registration_registrationpage_emailaddress_editext"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/edittext_customlayout_loginpage"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColorHint="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_emailaddress_textview"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_emailaddress_textview" />
+
+        <EditText
+            android:id="@+id/registration_registrationpage_firstname_editext"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_customlayout_loginpage"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName|textEmailAddress"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColorHint="@color/grey"
+            app:layout_constraintEnd_toStartOf="@+id/registration_registrationpage_lastname_editext"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_firstname_textview"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_firstname_textview" />
+
+        <EditText
+            android:id="@+id/registration_registrationpage_lastname_editext"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/edittext_customlayout_loginpage"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textPersonName|textEmailAddress"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/registration_registrationpage_firstname_editext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/registration_registrationpage_firstname_editext"
+            app:layout_constraintTop_toTopOf="@+id/registration_registrationpage_firstname_editext" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_registrationwithmeetingselectaccount_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Register with MeetingSelect"
+            android:textColor="@color/meetingSelectBlue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/registration_registrationpage_meetingselectlogo_imgview"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_meetingselectlogo_imgview"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_meetingselectlogo_imgview" />
+
+        <ImageView
+            android:id="@+id/registration_registrationpage_meetingselectlogo_imgview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/logosmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_emailaddress_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Email Address"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_companyname_editext" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_firstname_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="First Name"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_registrationwithmeetingselectaccount_textview" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_lastname_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Last Name"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/registration_registrationpage_firstname_textview"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_lastname_editext"
+            app:layout_constraintTop_toTopOf="@+id/registration_registrationpage_firstname_textview" />
+
+        <TextView
+            android:id="@+id/registration_registrationpage_password_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_emailaddress_editext"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_emailaddress_editext" />
+
+
+        <Button
+            android:id="@+id/registration_registration_button_loginpage"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+
+            android:background="@drawable/search_button_bg"
+            android:text="Register Now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/registration_registrationpageagreetoterms_textview"
+            app:layout_constraintEnd_toEndOf="@+id/registration_registrationpage_password_editext"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/registration_registrationpage_password_editext"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_country_spinner" />
+
+        <TextView
+            android:id="@+id/registration_registrationpageagreetoterms_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/AgreeWithTermsRegister"
+            android:textColor="@color/black"
+            android:textColorHighlight="#00ffffff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/registration_registrationpage_country_spinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_bg"
+            app:layout_constraintEnd_toEndOf="@+id/registration_registration_button_loginpage"
+            app:layout_constraintStart_toStartOf="@+id/registration_registration_button_loginpage"
+            app:layout_constraintTop_toBottomOf="@+id/registration_registrationpage_phonenumber_editext" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/registration_guideline2_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"
+        tools:visibility="invisible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

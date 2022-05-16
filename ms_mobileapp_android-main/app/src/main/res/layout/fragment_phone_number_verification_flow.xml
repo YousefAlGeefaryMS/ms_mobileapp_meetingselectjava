@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/verificationphonenumber_mainheadlayout_constraintlayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.profile.Account.RegistrationMS4.VerificationProcess.PhoneNumberVerificationFlow.PhoneNumberVerificationFlow">
+
+
+    <ImageView
+        android:id="@+id/verificationphonenumber_meetingselectbackground_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/meetingselect_mainbackgroundimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/verificationphonenumber_childlayout_constraintlayout"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/loginpage_custom_constraintlayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/verificationphonenumber_meetingselectlogo_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/logosmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/verificationphonenumber_choosemodeofverification_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Code has been sent, Fill in the code and click verify to proceed!"
+            android:textColor="@color/lightBlue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verificationphonenumber_meetingselectlogo_imageview" />
+
+
+        <com.meetingselect.meetingselect.HelperClasses.OtpEditText
+            android:id="@+id/verificationphonenumber_otpeditext_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:cursorVisible="false"
+            android:digits="1234567890"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/verificationphonenumber_choosemodeofverification_textview"
+            app:layout_constraintStart_toStartOf="@+id/verificationphonenumber_choosemodeofverification_textview"
+            app:layout_constraintTop_toBottomOf="@+id/verificationphonenumber_choosemodeofverification_textview" />
+
+
+        <Button
+            android:id="@+id/verificationphonenumber_phonenumberverification_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/search_button_bg"
+            android:text="Verify and Register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/verificationphonenumber_otpeditext_edittext"
+            app:layout_constraintStart_toStartOf="@+id/verificationphonenumber_otpeditext_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/verificationphonenumber_otpeditext_edittext" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

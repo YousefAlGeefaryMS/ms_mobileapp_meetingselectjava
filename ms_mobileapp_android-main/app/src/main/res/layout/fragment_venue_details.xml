@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/venues_masterconstraintlayout_venuedetails"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/backgroundColor"
+    tools:context=".main.searchhome.VenueDetailsModule.VenueDetails">
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar_venuedetails"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/cpb_1"
+        android:indeterminateDuration="@android:integer/config_longAnimTime"
+        app:layout_constraintBottom_toBottomOf="@+id/venues_childscrollview_venuedetails"
+        app:layout_constraintEnd_toEndOf="@+id/venues_childscrollview_venuedetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TimePicker
+        android:id="@+id/venuedetails_timepicker_timepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/venues_childscrollview_venuedetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.meetingselect.meetingselect.HelperClasses.CustomScrollView
+        android:id="@+id/venues_childscrollview_venuedetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/venues_description_layout_venuedetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/search_engine_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/venues_name_venuedetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Meet Berlage - Amsterdam Center"
+                    android:textColor="@color/meetingSelectBlue"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/instant_rfp_layout_venuedetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/instantbookable_corners"
+                    app:layout_constraintStart_toStartOf="@+id/venues_name_venuedetails"
+                    app:layout_constraintTop_toBottomOf="@+id/venues_name_venuedetails">
+
+                    <ImageView
+                        android:id="@+id/instantimg_venuedetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_shopping_basket_24"
+                        app:tint="@color/purple"
+                        tools:ignore="VectorDrawableCompat" />
+
+
+                    <TextView
+                        android:id="@+id/instantTV_venuedetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Request for Proposal"
+                        android:textColor="@color/purple"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/instantimg_venuedetails"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/venues_description_venuedetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Geweldig, je hebt die onontdekte parel gevonden! Een monumentaal gebouw, in het hart van historisch Amsterdam, waar je op flexibele wijze kan werken en vergaderen. Meet Berlage - met grote trots gehuisvest in de Beurs van Berlage - is een bruisende, laagdrempelige en sfeervolle plek met Coworking Space, Meeting Space, Event Space, Desk Space, en Office Space. We hopen je snel te ontvangen op deze unieke locatie en je zodoende de positieve werksfeer te laten ervaren en de vruchten te laten plukken van het gemeenschappelijke gevoel dat hier heerst. Dat laatste is volledig in het verlengde van de visie van Seats2Meet, waarbij we de overtuiging hebben dat verbinding van kennis en competenties de sleutel zijn tot economisch succes, zeker in het veranderende, maatschappelijke landschap."
+                    android:textColor="@color/grey"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/venues_name_venuedetails"
+                    app:layout_constraintTop_toBottomOf="@+id/instant_rfp_layout_venuedetails" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/venues_meetingrooms_layout_venuedetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/search_engine_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/venues_description_layout_venuedetails">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venuedetails_datetimeguestnumbersync_constraintlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/search_engine_shape"
+                    app:layout_constraintEnd_toEndOf="@+id/view2"
+                    app:layout_constraintStart_toStartOf="@+id/profile_view1"
+                    app:layout_constraintTop_toBottomOf="@+id/venues_meetingroomtv_venuedetails">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/venuedetails_starttimelayout_constraintlayout"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/search_for_location_shape"
+                        app:layout_constraintEnd_toStartOf="@+id/venuedetails_endtimelayout_constraintlayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/venuedetails_datechooserlayout_constraintlayout"
+                        app:layout_constraintTop_toBottomOf="@+id/venuedetails_datechooserlayout_constraintlayout">
+
+                        <ImageView
+                            android:id="@+id/venuedetails_calendericonst_imageview"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/ic_baseline_access_time_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/venuedetails_starttime_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:text="9:00"
+                            android:textColor="@color/meetingSelectBlue"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/venuedetails_calendericonst_imageview"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/venuedetails_calendericonst_imageview"
+                            app:layout_constraintTop_toTopOf="@+id/venuedetails_calendericonst_imageview" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/venuedetails_datechooserlayout_constraintlayout"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/search_for_location_shape"
+                        app:layout_constraintEnd_toStartOf="@+id/venuedetails_guestchooserlayout_constraintlayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/venuedetails_calendericon_imageview"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/venuedetails_datechooserlayout_constraintlayout"
+                            app:layout_constraintStart_toStartOf="@+id/venuedetails_datechooserlayout_constraintlayout"
+                            app:layout_constraintTop_toTopOf="@+id/venuedetails_datechooserlayout_constraintlayout" />
+
+                        <TextView
+                            android:id="@+id/venuedetails_date_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text=""
+                            android:textColor="@color/meetingSelectBlue"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/venuedetails_calendericon_imageview"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/venuedetails_calendericon_imageview"
+                            app:layout_constraintTop_toTopOf="@+id/venuedetails_calendericon_imageview" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/venuedetails_guestchooserlayout_constraintlayout"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/search_for_location_shape"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusedByDefault="false"
+                        android:inputType="none"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/venuedetails_datechooserlayout_constraintlayout"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/venuedetails_peopleicon_imageview"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/ic_baseline_group_24"
+                            app:layout_constraintBottom_toBottomOf="@+id/venuedetails_guestchooserlayout_constraintlayout"
+                            app:layout_constraintStart_toStartOf="@+id/venuedetails_guestchooserlayout_constraintlayout"
+                            app:layout_constraintTop_toTopOf="@+id/venuedetails_guestchooserlayout_constraintlayout" />
+
+                        <TextView
+                            android:id="@+id/venuedetails_attendeescount_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:text="3"
+                            android:textColor="@color/meetingSelectBlue"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/venuedetails_peopleicon_imageview"
+                            app:layout_constraintStart_toEndOf="@+id/venuedetails_peopleicon_imageview"
+                            app:layout_constraintTop_toTopOf="@+id/venuedetails_peopleicon_imageview" />
+
+                        <TextView
+                            android:id="@+id/venuedetails_attendeesstring_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="Guests"
+                            android:textColor="@color/meetingSelectBlue"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/venuedetails_attendeescount_textview"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/venuedetails_attendeescount_textview"
+                            app:layout_constraintTop_toTopOf="@+id/venuedetails_attendeescount_textview" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/venuedetails_endtimelayout_constraintlayout"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/search_for_location_shape"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/venuedetails_datechooserlayout_constraintlayout"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/venuedetails_starttimelayout_constraintlayout"
+                        app:layout_constraintTop_toBottomOf="@+id/venuedetails_datechooserlayout_constraintlayout">
+
+                        <ImageView
+                            android:id="@+id/venuedetails_calendericonet_imageview"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/ic_baseline_access_time_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/venuedetails_endtime_textview"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:text="17:00"
+                            android:textColor="@color/meetingSelectBlue"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/venuedetails_calendericonet_imageview"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/venuedetails_calendericonet_imageview"
+                            app:layout_constraintTop_toTopOf="@+id/venuedetails_calendericonet_imageview" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <Spinner
+                        android:id="@+id/venuedetails_orientation_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/spinner_bg"
+                        app:layout_constraintBottom_toBottomOf="@+id/venuedetails_endtimelayout_constraintlayout"
+                        app:layout_constraintEnd_toEndOf="@+id/venuedetails_guestchooserlayout_constraintlayout"
+                        app:layout_constraintStart_toStartOf="@+id/venuedetails_guestchooserlayout_constraintlayout"
+                        app:layout_constraintTop_toTopOf="@+id/venuedetails_endtimelayout_constraintlayout" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/profile_view1"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/venues_meetingroomtv_venuedetails"
+                    app:layout_constraintEnd_toStartOf="@+id/venues_meetingroomtv_venuedetails"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/venues_meetingroomtv_venuedetails" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/venues_meetingroomtv_venuedetails"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/venues_meetingroomtv_venuedetails"
+                    app:layout_constraintTop_toTopOf="@+id/venues_meetingroomtv_venuedetails" />
+
+                <TextView
+                    android:id="@+id/venues_meetingroomtv_venuedetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Meeting Rooms"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/venues_meetingroomsrv_venuedetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/venues_addtocart_layout_venuedetails"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venuedetails_datetimeguestnumbersync_constraintlayout"
+                    tools:visibility="invisible" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venues_addtocart_layout_venuedetails"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/search_engine_shape"
+
+                    app:layout_constraintBottom_toTopOf="@+id/venues_locationtextview_venuedetails"
+                    app:layout_constraintEnd_toEndOf="@+id/venues_meetingroomsrv_venuedetails"
+                    app:layout_constraintStart_toStartOf="@+id/venues_meetingroomsrv_venuedetails">
+
+
+                    <TextView
+                        android:id="@+id/venues_totalincvatTV_venuedetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Total (inc. VAT)"
+                        android:textColor="@color/grey"
+                        android:textSize="8sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/venues_pricecurrencytv_venuedetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="€"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venues_totalincvatTV_venuedetails" />
+
+                    <TextView
+                        android:id="@+id/venues_meetingroomtotalprice_venuedetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="To be decided"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/venues_pricecurrencytv_venuedetails"
+                        app:layout_constraintStart_toEndOf="@+id/venues_pricecurrencytv_venuedetails"
+                        app:layout_constraintTop_toTopOf="@+id/venues_pricecurrencytv_venuedetails" />
+
+                    <Button
+                        android:id="@+id/venues_addtocartbooknowbutton_venuedetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/search_button_bg"
+                        android:text="Add to Cart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/venues_locationtextview_venuedetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Location"
+                    android:textColor="@color/grey"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toTopOf="@+id/venue_venueaddress_venuedetails"
+                    app:layout_constraintStart_toStartOf="@+id/venues_meetingroomsrv_venuedetails" />
+
+                <TextView
+                    android:id="@+id/venue_venueaddress_venuedetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Oudebrugsteeg 9, Amsterdam, Netherlands"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/meetingSelectBlue"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/venues_venuemap_cardview_venuedetails"
+                    app:layout_constraintStart_toStartOf="@+id/venues_meetingroomsrv_venuedetails" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/venues_venuemap_cardview_venuedetails"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/venues_meetingroomsrv_venuedetails"
+                    app:layout_constraintStart_toStartOf="@+id/venues_meetingroomsrv_venuedetails">
+
+                    <fragment
+                        android:id="@+id/venues_venuemap_venuedetails"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/venues_noresultstext_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="No Rooms Available"
+                    android:textColor="@color/meetingSelectBlue"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toTopOf="@+id/venues_addtocart_layout_venuedetails"
+                    app:layout_constraintEnd_toEndOf="@+id/venues_meetingroomsrv_venuedetails"
+                    app:layout_constraintStart_toStartOf="@+id/venues_meetingroomsrv_venuedetails"
+                    app:layout_constraintTop_toBottomOf="@+id/venuedetails_datetimeguestnumbersync_constraintlayout" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.meetingselect.meetingselect.HelperClasses.CustomScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

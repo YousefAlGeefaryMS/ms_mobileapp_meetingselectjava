@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myRequests_mainheadlayout_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fitsSystemWindows="true"
+    tools:context=".main.myrequests.MyRequests">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myrequests_savedbookingsrv_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_savedbookingsedittext_edittext" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myrequests_confirmedbookingsrv_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_savedbookingsedittext_edittext" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myrequests_pendingbookingsrv_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_savedbookingsedittext_edittext" />
+
+
+    <SearchView
+        android:id="@+id/myrequests_savedbookingsedittext_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_for_location_shape"
+        android:iconifiedByDefault="false"
+        android:queryHint="Searching unavailable for this category"
+        android:theme="@style/SearchViewMy"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="@+id/myrequests_tablayoutholder_constraintlayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/myrequests_tablayoutholder_constraintlayout"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_tablayoutholder_constraintlayout" />
+
+
+    <SearchView
+        android:id="@+id/myrequests_pendingbookingsedittext_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/search_for_location_shape"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search for your meeting name here"
+        android:theme="@style/SearchViewMy"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_tablayoutholder_constraintlayout"
+        tools:visibility="gone">
+
+    </SearchView>
+
+    <SearchView
+        android:id="@+id/myrequests_confirmedbookingsedittext_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/search_for_location_shape"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search for your meeting name here"
+        android:theme="@style/SearchViewMy"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_tablayoutholder_constraintlayout"
+        tools:visibility="gone">
+
+    </SearchView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myrequests_tablayoutholder_constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/myrequeststab_proposallayout_includelayout"
+            layout="@layout/myrequests_proposaltoolbardesign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myrequests_holderofall_constraintlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_savedbookingsedittext_edittext"
+        tools:visibility="visible">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/myrequests_shimmerlayout_shimmerlayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shimmer_highlight_alpha="0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_layout_viewproposals" />
+
+                <include layout="@layout/shimmer_layout_viewproposals" />
+
+                <include layout="@layout/shimmer_layout_viewproposals" />
+
+                <include layout="@layout/shimmer_layout_viewproposals" />
+
+                <include layout="@layout/shimmer_layout_viewproposals" />
+
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/myrequests_noresultsfound_imageview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="128dp"
+        android:src="@drawable/error_noresultsfound"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_tablayoutholder_constraintlayout" />
+
+    <TextView
+        android:id="@+id/myrequest_noresultsfound_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="No Results Found"
+        android:textColor="@color/grey"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/myrequests_noresultsfound_imageview"
+        app:layout_constraintStart_toStartOf="@+id/myrequests_noresultsfound_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_noresultsfound_imageview" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

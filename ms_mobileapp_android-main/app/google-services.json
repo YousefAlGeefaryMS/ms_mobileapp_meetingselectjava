@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "385058807150",
+    "project_id": "meetingselect-cc578",
+    "storage_bucket": "meetingselect-cc578.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385058807150:android:d478f1f0937e4b334a357f",
+        "android_client_info": {
+          "package_name": "com.meetingselect.meetingselect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385058807150-lfgp3ceo19j9s6i6f21h8ir0mnskm9ii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.meetingselect.meetingselect",
+            "certificate_hash": "a5b26693e6f5a3e0faf5d6e90970111a9e096121"
+          }
+        },
+        {
+          "client_id": "385058807150-ap6988g58qfbeusk4mehe705d49d1bv2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOrt1Y9hri7m67whn1jrhmuJk-bCEAaDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385058807150-ap6988g58qfbeusk4mehe705d49d1bv2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

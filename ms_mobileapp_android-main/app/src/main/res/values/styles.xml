@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="SplashTheme" parent="Theme.MeetingSelect">
+        <item name="android:windowBackground">@drawable/ms_splashscreen</item>
+    </style>
+
+
+    <style name="SearchViewMy" parent="Widget.AppCompat.Light.SearchView">
+        <item name="submitBackground">@android:color/transparent</item>
+        <item name="queryBackground">@android:color/transparent</item>
+    </style>
+    
+    
+    <style name="ShapeAppearanceOverlay.TopRLCut" parent="">
+
+        <item name="cornerSizeTopRight">7dp</item>
+        <item name="cornerSizeTopLeft">7dp</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.AllCorners" parent="">
+
+        <item name="cornerSizeTopRight">7dp</item>
+        <item name="cornerSizeTopLeft">7dp</item>
+        <item name="cornerSizeBottomRight">7dp</item>
+        <item name="cornerSizeBottomLeft">7dp</item>
+    </style>
+
+    <style name="CustomDatePickerDialog"
+        parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:dialogTheme">@style/MyDialogTheme</item>
+        <item name="android:timePickerStyle" tools:targetApi="lollipop">@style/MyDatePicker</item>
+    </style>
+
+    <style name="MyDialogTheme"
+        parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:timePickerStyle" tools:targetApi="lollipop">@style/MyDatePicker</item>
+    </style>
+
+    <style name="MyDatePicker"
+        parent="@android:style/Widget.Material.Light.TimePicker" tools:targetApi="lollipop">
+        <item name="android:timePickerMode">spinner</item>
+    </style>
+
+
+</resources>

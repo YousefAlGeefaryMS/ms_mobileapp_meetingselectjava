@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchHomepage">
+
+    <fragment
+        android:id="@+id/searchHomepage"
+        android:name="com.meetingselect.meetingselect.main.searchhome.SearchHomepage"
+        android:label="fragment_search_venues_home_page"
+        tools:layout="@layout/fragment_search_venues_home_page" >
+        <action
+            android:id="@+id/action_searchHomepage_to_searchVenues"
+            app:destination="@id/searchVenues"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_searchHomepage_to_venueResults"
+            app:destination="@id/navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchVenues"
+        android:name="com.meetingselect.meetingselect.main.searchhome.SearchVenueModule.SearchVenues"
+        android:label="fragment_search_venues"
+        tools:layout="@layout/fragment_search_venues" >
+        <action
+            android:id="@+id/action_searchVenues_to_searchHomepage"
+            app:destination="@id/searchHomepage"
+            app:popUpTo="@id/searchHomepage"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.meetingselect.meetingselect.main.profile.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/myRequests"
+        android:name="com.meetingselect.meetingselect.main.myrequests.MyRequests"
+        android:label="fragment_my_requests"
+        tools:layout="@layout/fragment_my_requests" >
+        <action
+            android:id="@+id/action_myRequests_to_confirmedBookingsDetailsFragment"
+            app:destination="@id/confirmedBookingsDetailsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_myRequests_to_pendingBookingsDetailsFragment"
+            app:destination="@id/pendingBookingsDetailsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/venueDetails"
+        android:name="com.meetingselect.meetingselect.main.searchhome.VenueDetailsModule.VenueDetails"
+        android:label="fragment_venue_details"
+        tools:layout="@layout/fragment_venue_details" >
+        <action
+            android:id="@+id/action_venueDetails_to_venueInstantBookingProcess"
+            app:destination="@id/venueInstantBookingProcess" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.meetingselect.meetingselect.main.profile.Account.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_loginPage"
+            app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_profile_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_profile_to_registrationPage"
+            app:destination="@id/registrationPage" />
+        <action
+            android:id="@+id/action_profile_to_loginPageMS2"
+            app:destination="@id/loginPageMS2" />
+        <action
+            android:id="@+id/action_profile_to_manageProfile"
+            app:destination="@id/manageProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="com.meetingselect.meetingselect.main.profile.Account.LoginMS4.LoginPage"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page" >
+        <action
+            android:id="@+id/action_loginPage_to_searchHomepage"
+            app:destination="@id/searchHomepage"
+            app:popUpTo="@id/searchHomepage"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/venueResults">
+        <fragment
+            android:id="@+id/venueResults"
+            android:name="com.meetingselect.meetingselect.main.searchhome.VenueResultsModule.VenueResults"
+            android:label="fragment_venue_results"
+            tools:layout="@layout/fragment_venue_results">
+            <action
+                android:id="@+id/action_venueResults_to_venueDetails"
+                app:destination="@id/venueDetails" />
+            <action
+                android:id="@+id/action_venueResults_to_searchHomepage"
+                app:destination="@id/searchHomepage" />
+            <action
+                android:id="@+id/action_venueResults_to_searchVenues"
+                app:destination="@id/searchVenues"
+                app:popUpToInclusive="false" />
+            <argument
+                android:name="NameID"
+                app:argType="string"
+                app:nullable="true" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/registrationPage"
+        android:name="com.meetingselect.meetingselect.main.profile.Account.RegistrationMS4.RegistrationPage"
+        android:label="fragment_registration_page"
+        tools:layout="@layout/fragment_registration_page" >
+        <action
+            android:id="@+id/action_registrationPage_to_searchHomepage"
+            app:destination="@id/searchHomepage"
+            app:popUpTo="@id/searchHomepage"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registrationPage_to_verifyRegistrationPage"
+            app:destination="@id/verifyRegistrationPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/venueInstantBookingProcess"
+        android:name="com.meetingselect.meetingselect.main.searchhome.VenueInstantBookingProcess.VenueInstantBookingProcess"
+        android:label="fragment_venue_instant_booking_process"
+        tools:layout="@layout/fragment_venue_instant_booking_process" >
+        <action
+            android:id="@+id/action_venueInstantBookingProcess_to_finishingConfirmingBooking"
+            app:destination="@id/finishingConfirmingBooking" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishingConfirmingBooking"
+        android:name="com.meetingselect.meetingselect.main.searchhome.VenueInstantBookingProcess.FinishingConfirmingBooking"
+        android:label="fragment_finishing_confirming_booking"
+        tools:layout="@layout/fragment_finishing_confirming_booking" >
+        <action
+            android:id="@+id/action_finishingConfirmingBooking_to_searchHomepage"
+            app:destination="@id/searchHomepage"
+            app:popUpTo="@id/searchHomepage"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyRegistrationPage"
+        android:name="com.meetingselect.meetingselect.main.profile.Account.RegistrationMS4.VerificationProcess.VerifyRegistrationPage"
+        android:label="fragment_verify_registration_page"
+        tools:layout="@layout/fragment_verify_registration_page" >
+        <action
+            android:id="@+id/action_verifyRegistrationPage_to_emailVerificationFlow"
+            app:destination="@id/emailVerificationFlow" />
+        <action
+            android:id="@+id/action_verifyRegistrationPage_to_phoneNumberVerificationFlow"
+            app:destination="@id/phoneNumberVerificationFlow" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailVerificationFlow"
+        android:name="com.meetingselect.meetingselect.main.profile.Account.RegistrationMS4.VerificationProcess.EmailAddressVerificationFlow.EmailVerificationFlow"
+        android:label="fragment_email_verification_flow"
+        tools:layout="@layout/fragment_email_verification_flow" >
+        <action
+            android:id="@+id/action_emailVerificationFlow_to_searchHomepage"
+            app:destination="@id/searchHomepage"
+            app:popUpTo="@id/searchHomepage"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumberVerificationFlow"
+        android:name="com.meetingselect.meetingselect.main.profile.Account.RegistrationMS4.VerificationProcess.PhoneNumberVerificationFlow.PhoneNumberVerificationFlow"
+        android:label="fragment_phone_number_verification_flow"
+        tools:layout="@layout/fragment_phone_number_verification_flow" >
+        <action
+            android:id="@+id/action_phoneNumberVerificationFlow_to_searchHomepage"
+            app:destination="@id/searchHomepage"
+            app:popUpTo="@id/searchHomepage"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPageMS2"
+        android:name="com.meetingselect.meetingselect.main.profile.Account.LoginMS2.LoginPageMS2"
+        android:label="LoginPageMS2" >
+        <action
+            android:id="@+id/action_loginPageMS2_to_searchHomepage"
+            app:destination="@id/searchHomepage"
+            app:popUpTo="@id/loginPageMS2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageProfile"
+        android:name="com.meetingselect.meetingselect.main.profile.Account.ManageProfile"
+        android:label="fragment_manage_profile"
+        tools:layout="@layout/fragment_manage_profile" />
+    <fragment
+        android:id="@+id/confirmedBookingsDetailsFragment"
+        android:name="com.meetingselect.meetingselect.main.myrequests.ConfirmedBookingsDetailsFragment"
+        android:label="fragment_confirmed_bookings_details"
+        tools:layout="@layout/fragment_confirmed_bookings_details" >
+        <action
+            android:id="@+id/action_confirmedBookingsDetailsFragment_to_PDFWebView"
+            app:destination="@id/PDFWebView"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/PDFWebView"
+        android:name="com.meetingselect.meetingselect.main.myrequests.PDFWebView"
+        android:label="fragment_pdf_web_view"
+        tools:layout="@layout/fragment_pdf_web_view" />
+    <fragment
+        android:id="@+id/pendingBookingsDetailsFragment"
+        android:name="com.meetingselect.meetingselect.main.myrequests.PendingBookingsDetailsFragment"
+        android:label="fragment_pending_bookings_details"
+        tools:layout="@layout/fragment_pending_bookings_details" >
+        <action
+            android:id="@+id/action_pendingBookingsDetailsFragment_to_PDFWebView"
+            app:destination="@id/PDFWebView"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

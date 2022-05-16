@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/venue_details_recyclerview_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_engine_shape">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/venues_image_venuedetailsrooms"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.TopRLCut"
+        app:srcCompat="@drawable/meeting_venue_image" />
+
+    <TextView
+        android:id="@+id/venue_name_venuedetailsrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Meet Berlage - Amsterdam Center"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/meetingSelectBlue"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/venues_image_venuedetailsrooms" />
+
+    <TextView
+        android:id="@+id/venue_address_venuedetailsrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Oudebrugsteeg 9, Amsterdam, Netherlands"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/venue_name_venuedetailsrooms"
+        app:srcCompat="@drawable/ic_baseline_location_on_24"
+        tools:ignore="VectorDrawableCompat" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/instantbookable_corners"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/venue_address_venuedetailsrooms">
+
+        <ImageView
+            android:id="@+id/instantimg_venueresults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_shopping_basket_24"
+            app:tint="@color/purple"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <TextView
+            android:id="@+id/instantTV_venueresults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Request for Proposal"
+            android:textColor="@color/purple"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/instantimg_venueresults"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/moreInfo_venueResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="See more info "
+        android:textColor="@color/grey"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/moreInfo_venueResults"
+        app:layout_constraintStart_toEndOf="@+id/moreInfo_venueResults"
+        app:layout_constraintTop_toTopOf="@+id/moreInfo_venueResults"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/venue_booknow_venueresults"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/search_button_bg"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Book Now"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/venue_addtocarttbutton_venueresults"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/search_button_bg"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Add to Cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

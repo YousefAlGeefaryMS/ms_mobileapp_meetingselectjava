@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/edittext_customlayout_loginpage.xml" value="0.16447368421052633" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/edittext_instantbookingprocess.xml" value="0.3828125" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.3223684210526316" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.16447368421052633" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.3" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/instantbooking_cards.xml" value="0.3828125" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/loginpage_custom_constraintlayout.xml" value="0.16447368421052633" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/ms_splashscreen.xml" value="0.16447368421052633" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/room_unavailable.xml" value="0.337037037037037" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/search_button_bg.xml" value="0.1" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/search_engine_shape.xml" value="0.1" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/search_for_location_shape.xml" value="0.16447368421052633" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/search_plate_bg.xml" value="0.16447368421052633" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/drawable/totalprice_instantbookingprocess.xml" value="0.3828125" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout-v21/fragment_venue_details.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/activity_main.xml" value="0.2586050724637681" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_finishing_confirming_booking.xml" value="0.25" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_login_page.xml" value="0.18" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_my_requests.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_registration_page.xml" value="0.2" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_search_venues.xml" value="0.3087719298245614" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_search_venues_home_page.xml" value="0.5" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_venue_details.xml" value="0.22" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_venue_instant_booking_process.xml" value="0.22" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/fragment_venue_results.xml" value="0.33" />
+        <entry key="..\:/Users/YousefAl-Geefary/MeetingSelect/ms_mobileapp_android/app/src/main/res/layout/venue_detailrooms_recyclerview.xml" value="0.5" />
+        <entry key="app/src/main/res/drawable/divider.xml" value="0.2734375" />
+        <entry key="app/src/main/res/drawable/myrequests_divider.xml" value="0.2734375" />
+        <entry key="app/src/main/res/drawable/myrequeststab_coloredbubble_appbarlayout.xml" value="0.2734375" />
+        <entry key="app/src/main/res/drawable/profilepage_rotatedline.xml" value="0.359375" />
+        <entry key="app/src/main/res/drawable/rfpidlayoutshape.xml" value="0.2537037037037037" />
+        <entry key="app/src/main/res/drawable/room_unavailable.xml" value="0.359375" />
+        <entry key="app/src/main/res/drawable/search_engine_shape.xml" value="0.2537037037037037" />
+        <entry key="app/src/main/res/layout/fragment_confirmed_bookings_details.xml" value="0.4035864130869507" />
+        <entry key="app/src/main/res/layout/fragment_email_verification_flow.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_finishing_confirming_booking.xml" value="0.12512664640324214" />
+        <entry key="app/src/main/res/layout/fragment_login_page.xml" value="0.20018115942028986" />
+        <entry key="app/src/main/res/layout/fragment_login_page_m_s2.xml" value="0.34322916666666664" />
+        <entry key="app/src/main/res/layout/fragment_my_requests.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_pdf_web_view.xml" value="0.12512664640324214" />
+        <entry key="app/src/main/res/layout/fragment_pending_bookings_details.xml" value="0.29528985507246375" />
+        <entry key="app/src/main/res/layout/fragment_phone_number_verification_flow.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_registration_page.xml" value="0.20018115942028986" />
+        <entry key="app/src/main/res/layout/fragment_search_venues.xml" value="0.3052536231884058" />
+        <entry key="app/src/main/res/layout/fragment_search_venues_home_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_venue_details.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_venue_results.xml" value="0.37142857142857144" />
+        <entry key="app/src/main/res/layout/fragment_verify_registration_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/myrequests_proposal_recyclerview.xml" value="0.44473313777833035" />
+        <entry key="app/src/main/res/layout/myrequests_proposaltoolbardesign.xml" value="0.40771349862258954" />
+        <entry key="app/src/main/res/layout/shimmer_layout_venueresults.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/shimmer_layout_viewproposals.xml" value="0.31003215651216043" />
+        <entry key="app/src/main/res/layout/venue_results_recyclerview.xml" value="0.5198942642419976" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

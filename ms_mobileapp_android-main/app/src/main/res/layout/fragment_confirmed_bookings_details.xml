@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirmedbookingsdetails_mainheadlayout_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".main.myrequests.ConfirmedBookingsDetailsFragment">
+
+    <ProgressBar
+        android:id="@+id/confirmedbookingsdetails_progressbar_progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/cpb_1"
+        android:indeterminateDuration="@android:integer/config_longAnimTime"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/confirmedbookingsdetails_mainheadscrollviewlayout_nestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/confirmedbookingdetails_childinformationholderlayout_constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/search_engine_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirmedbookingdetails_basicbookinginformation_constraintlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/search_engine_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_meetingselectlogo_imageview">
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_rfppdflinkstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="RFP PDF"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_rfpid_textview4"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_rfpid_textview4"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_rfpid_textview4" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_rfppdflink_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_rfppdflinkstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_rfppdflinkstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_rfppdflinkstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_arrivaldatestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Arrival Date"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_rfpidstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_rfpidstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_departuredate_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_departuredatestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_departuredatestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_departuredatestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_departuredatestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Departure Date"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_arrivaldatestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_arrivaldatestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_arrivaldate_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="test"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_arrivaldatestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_arrivaldatestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_arrivaldatestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_proposalidstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Proposal ID"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_companynamestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_rfpidstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="RFP ID"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_rfpid_textview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="test"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_rfpidstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_rfpidstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_rfpidstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_proposalid_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="86827"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_proposalidstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_proposalidstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_proposalidstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_meetingnamestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Meeting Name"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_departuredatestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_departuredatestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_meetingname_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Test - Anne"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_meetingnamestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_meetingnamestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_meetingnamestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_companynamestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Company Name"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_meetingnamestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_meetingnamestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_companyname_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="test"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_companynamestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_companynamestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_companynamestring_textview" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirmedbookingdetails_venudetailsandpdf_constraintlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/search_engine_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmedbookingdetails_basicbookinginformation_constraintlayout">
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_proposalpdfstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Proposal PDF"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_venuenamestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_acceptversionnumberstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_proposalpdflink_textview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_proposalpdfstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_proposalpdfstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_proposalpdfstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_venuenamestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Venue Name"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_venuename_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="NH Utrecht"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_venuenamestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_venuenamestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_venuenamestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_othervenuenamesstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Other Venue Names"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_venuenamestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_venuenamestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_venuenames_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="test"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_othervenuenamesstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_venuename_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_acceptversionnumberstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Accept Version Number"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_othervenuenamesstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_othervenuenamesstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_acceptversionnumber_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="1"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_acceptversionnumberstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_acceptversionnumberstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_acceptversionnumberstring_textview" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirmedbookingdetails_divisionanddepartment_constraintlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/search_engine_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmedbookingdetails_venudetailsandpdf_constraintlayout">
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_divisionidstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Divison ID"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_division_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_departmentstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Department"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_divisionidstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_divisionidstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_department_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_departmentstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_departmentstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_departmentstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_divisionid_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="107150"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_divisionidstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_divisionidstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_divisionidstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_costlocationstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Cost Location"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_costlocation_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_costlocationstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_costlocationstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_costlocationstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_divisionstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Division"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_costlocationstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_costlocationstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_division_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="R11"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_divisionstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_divisionstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_divisionstring_textview" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirmedbookingdetails_contactnamesandcomments_constraintlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/search_engine_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmedbookingdetails_divisionanddepartment_constraintlayout">
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_commentstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Comment"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_reasonfordeclinestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_commentfordeclinestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Comment for Decline"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_commentstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_noticeboardnamestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_reasonfordeclinestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Reason for Decline"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_commentfordeclinestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_commentfordeclinestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_commentfordecline_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_commentfordeclinestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_commentfordeclinestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_commentfordeclinestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_reasonfordecline_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_reasonfordeclinestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_reasonfordeclinestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_reasonfordeclinestring_textview"
+                    app:layout_constraintVertical_bias="0.50" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_comment_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_commentstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_commentstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_commentstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_contactnamestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Contact Name"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_contactname_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_contactnamestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_contactnamestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_contactnamestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_noticeboardnamestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Notice Board Name"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/confirmedbookingsdetails_commentfordeclinestring_textview"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_contactnamestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_contactnamestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_noticeboardname_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="test"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_noticeboardnamestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_contactname_textview" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirmedbookingdetails_rfpdetailsentities_constraintlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/search_engine_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmedbookingdetails_contactnamesandcomments_constraintlayout">
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_proposalattachmentsstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Proposal Attachments"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_seriesrfpidsstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_seriesrfpidsstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_proposalattachments_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_proposalattachmentsstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_proposalattachmentsstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_proposalattachmentsstring_textview"
+                    app:layout_constraintVertical_bias="0.50" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_seriesrfpidsstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Series RFP ID's"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_seriesrfpid_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_seriesrfpidsstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_seriesrfpidsstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_seriesrfpidsstring_textview" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirmedbookingdetails_financialdetails_constraintlayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/search_engine_shape"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmedbookingdetails_rfpdetailsentities_constraintlayout">
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_totalestimatedcostexcltaxincompanycurrencystring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Total Estimated Cost Excl. Tax in Company Currency"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_companycurrencysignstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_companycurrencysignstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_totalestimatedcostexcltaxincompanycurrency_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="525.62"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_totalestimatedcostexcltaxincompanycurrencystring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_totalestimatedcostexcltaxincompanycurrencystring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_companycurrencystring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Company Currency"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_totalestimatedcostexcltaxstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_totalestimatedcostexcltaxstring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_companycurrencysignstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Company Currency Sign"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_companycurrencystring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_companycurrencystring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_companycurrency_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_companycurrencystring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_companycurrencystring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_companycurrencystring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_companycurrencysign_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_companycurrencysignstring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_companycurrencysignstring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_companycurrencysignstring_textview"
+                    app:layout_constraintVertical_bias="0.50" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_currencycodestring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Currency Code"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_currencycode_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="N/A"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/confirmedbookingsdetails_currencycodestring_textview"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_currencycodestring_textview"
+                    app:layout_constraintTop_toTopOf="@+id/confirmedbookingsdetails_currencycodestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_totalestimatedcostexcltaxstring_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Total Estimated Cost excl. tax"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/confirmedbookingsdetails_currencycodestring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_currencycodestring_textview" />
+
+                <TextView
+                    android:id="@+id/confirmedbookingsdetails_totalestimatedcostexcltax_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="70.68"
+                    android:textColor="@color/meetignselectDarkBlue"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/confirmedbookingsdetails_totalestimatedcostexcltaxstring_textview"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmedbookingsdetails_currencycode_textview" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/confirmedbookingsdetails_meetingselectlogo_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/logosmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/venue_details_recyclerview_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_engine_shape">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/venues_image_venuedetailsrooms"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.TopRLCut"
+        app:srcCompat="@drawable/meeting_venue_image" />
+
+    <TextView
+        android:id="@+id/venue_name_venuedetailsrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Serendipity"
+        android:textColor="@color/meetingSelectBlue"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/venues_image_venuedetailsrooms" />
+
+    <View
+        android:id="@+id/venues_whitebackgroundcheckmark_venuedetailsrooms"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/checkmark_roomsdetails"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/venues_checkmark_venuedetailsrooms"
+        app:layout_constraintEnd_toEndOf="@+id/venues_checkmark_venuedetailsrooms"
+        app:layout_constraintStart_toStartOf="@+id/venues_checkmark_venuedetailsrooms"
+        app:layout_constraintTop_toTopOf="@+id/venues_checkmark_venuedetailsrooms" />
+
+    <ImageView
+        android:id="@+id/venues_checkmark_venuedetailsrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/venues_image_venuedetailsrooms"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/venue_description_venuedetailsrooms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="A pleasant meeting space suitable for small meetings and business appointments."
+        android:textColor="@color/lightgrey"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/venue_name_venuedetailsrooms"
+        app:layout_constraintTop_toBottomOf="@+id/venue_name_venuedetailsrooms"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/venue_constraintlayout_attendeesnumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/attendees_number_layout_detailsrooms"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/venue_description_venuedetailsrooms">
+
+
+        <TextView
+            android:id="@+id/venues_string_meeting_venuedetailsrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Meeting"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/venue_numberofparticipants_venuedetailsrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Participants 4 - 14"
+            android:textColor="@color/lightBlue"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/venues_string_meeting_venuedetailsrooms"
+            app:layout_constraintTop_toBottomOf="@+id/venues_string_meeting_venuedetailsrooms" />
+
+        <TextView
+            android:id="@+id/venue_seatprice_venuedetailsrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="€ 15, 73"
+            android:textColor="@color/lightBlue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/venue_stringseat_venuedetailsrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="/ PERSON"
+            android:textColor="@color/lightgrey"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="@+id/venue_seatprice_venuedetailsrooms"
+            app:layout_constraintTop_toBottomOf="@+id/venue_seatprice_venuedetailsrooms" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/venue_roomunavailablechangeroom_constraintlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/room_unavailable"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/venues_image_venuedetailsrooms"
+        app:layout_constraintEnd_toEndOf="@+id/venues_image_venuedetailsrooms"
+        app:layout_constraintStart_toStartOf="@+id/venues_image_venuedetailsrooms"
+        app:layout_constraintTop_toTopOf="@+id/venues_image_venuedetailsrooms">
+
+        <TextView
+            android:id="@+id/venue_roomunavailabletext_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="NOT AVAILABLE FOR THIS DATE OR ATTENDEES"
+            android:textColor="#80000000"
+            android:textSize="14sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

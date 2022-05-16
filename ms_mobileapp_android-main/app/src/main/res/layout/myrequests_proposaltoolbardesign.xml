@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/search_plate_bg">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/myrequeststoolbar_selectedtext_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/myrequeststab_coloredbubble_appbarlayout"
+                android:text="" />
+
+            <View
+                android:id="@+id/myrequeststoolbar_savedpendingdivider_view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/myrequests_divider"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="" />
+
+            <View
+                android:id="@+id/myrequeststoolbar_pendingconfirmeddivider_view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/myrequests_divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:text="" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/myrequeststoolbar_savedproposals_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Saved Bookings" />
+
+
+            <TextView
+                android:id="@+id/myrequeststoolbar_pendingproposals_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Pending Bookings" />
+
+            <TextView
+                android:id="@+id/myrequeststoolbar_confirmedproposals_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Confirmed Bookings" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

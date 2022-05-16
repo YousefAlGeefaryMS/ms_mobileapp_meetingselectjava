@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myrequestsrv_mainheadlayout_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_engine_shape">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myrequests_rfpidheader_constraintlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/shimmerlayoutcolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/myrequestsrv_rfpidstring_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="RFP ID"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:background="@color/grey"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/myrequestsrv_rfpid_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="68780"
+            android:background="@color/grey"
+
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/myrequestsrv_rfpidstring_textview"
+            app:layout_constraintStart_toEndOf="@+id/myrequestsrv_rfpidstring_textview"
+            app:layout_constraintTop_toTopOf="@+id/myrequestsrv_rfpidstring_textview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <TextView
+        android:id="@+id/myrequestsrv_meetingname_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Test"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/myrequestsrv_meetingnamestring_textview"
+        app:layout_constraintStart_toEndOf="@+id/myrequestsrv_meetingnamestring_textview"
+        app:layout_constraintTop_toTopOf="@+id/myrequestsrv_meetingnamestring_textview" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_arrivaldate_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_bold"
+        android:text="17 Nov 2021"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/myrequestsrv_bookingstatusstring_textview"
+        app:layout_constraintStart_toEndOf="@+id/myrequestsrv_arrivaldatestring_textview"
+        app:layout_constraintTop_toBottomOf="@+id/myrequestsrv_bookernamestring_textview" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_departuredate_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_bold"
+        android:text="17 Nov 2021"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/myrequestsrv_departuredatestring_textview"
+        app:layout_constraintStart_toEndOf="@+id/myrequestsrv_departuredatestring_textview"
+        app:layout_constraintTop_toTopOf="@+id/myrequestsrv_departuredatestring_textview" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_bookingstatus_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Cancelled"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/myrequestsrv_bookingstatusstring_textview"
+        app:layout_constraintStart_toEndOf="@+id/myrequestsrv_bookingstatusstring_textview"
+        app:layout_constraintTop_toTopOf="@+id/myrequestsrv_bookingstatusstring_textview" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_bookername_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Lisa Micro"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/myrequestsrv_bookernamestring_textview"
+        app:layout_constraintStart_toEndOf="@+id/myrequestsrv_bookernamestring_textview"
+        app:layout_constraintTop_toTopOf="@+id/myrequestsrv_bookernamestring_textview" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_meetingnamestring_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Meeting Name"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myrequests_rfpidheader_constraintlayout" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_bookernamestring_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Booker Name"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/myrequestsrv_meetingnamestring_textview"
+        app:layout_constraintTop_toBottomOf="@+id/myrequestsrv_meetingnamestring_textview" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_bookingstatusstring_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Booking Status"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/myrequestsrv_arrivaldatestring_textview"
+        app:layout_constraintTop_toBottomOf="@+id/myrequestsrv_arrivaldatestring_textview" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_departuredatestring_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Departure Date"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/myrequestsrv_arrivaldate_textview"
+        app:layout_constraintStart_toEndOf="@+id/myrequestsrv_arrivaldate_textview"
+        app:layout_constraintTop_toTopOf="@+id/myrequestsrv_arrivaldate_textview" />
+
+    <TextView
+        android:id="@+id/myrequestsrv_arrivaldatestring_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/shimmerlayoutcolor"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Arrival Date"
+        android:textColor="@color/shimmerlayoutcolor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/myrequestsrv_bookernamestring_textview"
+        app:layout_constraintTop_toBottomOf="@+id/myrequestsrv_bookernamestring_textview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

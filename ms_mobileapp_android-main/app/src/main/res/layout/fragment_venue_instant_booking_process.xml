@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/venueinstantbooking_mainlayout_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".main.searchhome.VenueInstantBookingProcess.VenueInstantBookingProcess">
+
+    <ProgressBar
+        android:id="@+id/venueinstantbooking_loadinginstantbookingprocess_constraintlayout"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/cpb_1"
+        android:indeterminateDuration="@android:integer/config_longAnimTime"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.meetingselect.meetingselect.HelperClasses.CustomScrollView
+        android:id="@+id/venueinstantbooking_secondmainlayout_customscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/venueinstantbooking_scrollviewchildlayout_constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/venueinstantbooking_formholder_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/venueinstantbooking_finalizeyourreservationkeyword_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Finalize your reservation"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueintantbooking_venuedetails_constraintlayout" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venueintantbooking_venuedetails_constraintlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/instantbooking_cards"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/venueinstantbooking_venueimage_shapeableimageview"
+                        android:layout_width="0dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.428"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.TopRLCut"
+                        app:srcCompat="@drawable/meeting_venue_image" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_venuename_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Spaces Vijzelstraat"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_venueimage_shapeableimageview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_venueaddress_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Vijzelstraat 68-72, Amsterdam, Netherlands"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_addressicon_imageview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_addressicon_imageview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_addressicon_imageview" />
+
+                    <ImageView
+                        android:id="@+id/venueinstantbooking_attendeesicon_textview"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/ic_baseline_group_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_roomname_textview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_roomname_textview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_roomname_textview" />
+
+                    <ImageView
+                        android:id="@+id/venueinstantbooking_addressicon_imageview"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_baseline_location_on_24"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_venuename_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_venuename_textview" />
+
+                    <ImageView
+                        android:id="@+id/venueinstantbooking_dateicon_imageview"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_baseline_calendar_today_24"
+                        app:layout_constraintEnd_toEndOf="@+id/venueinstantbooking_addressicon_imageview"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_addressicon_imageview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_viewaddressNdate_view" />
+
+                    <ImageView
+                        android:id="@+id/venueinstantbooking_roomicon_imageview"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_baseline_meeting_room_24"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_dateicon_imageview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_dateNroomname_view" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_attendeeskeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_regular"
+
+                        android:text="Attendees"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_numberofattendees_textview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_numberofattendees_textview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_numberofattendees_textview"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_numberofattendees_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_bold"
+
+                        android:text="10"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_attendeesicon_textview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_attendeesicon_textview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_attendeesicon_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_roomname_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Club Room"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_roomicon_imageview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_roomicon_imageview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_roomicon_imageview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_totalexctaxkeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Total excl. tax:"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/view7"
+                        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_totaltaxkeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:text="Total 0%"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/view8"
+                        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_servicefeeinlcvatkeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Service Fee incl. vat:"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/view9"
+                        app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_servicefeeexclvatkeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Service Fee excl. vat:"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/view6"
+                        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_roomrentalkeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Room Rental:"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_roomnameNroomrental_view"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_roomnameNroomrental_view" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_roomrental_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="€73.31"
+
+                        android:textColor="@color/grey"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view6"
+                        app:layout_constraintEnd_toEndOf="@+id/venueinstantbooking_roomnameNroomrental_view"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_roomnameNroomrental_view" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_servicefeeexclvat_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="€0.00"
+
+                        android:textColor="@color/grey"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view7"
+                        app:layout_constraintEnd_toEndOf="@+id/view6"
+                        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_totalexctax_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="€1,099.65"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view8"
+                        app:layout_constraintEnd_toEndOf="@+id/view7"
+                        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_totaltax_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/roboto_light"
+                        android:text="€0.00"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view9"
+                        app:layout_constraintEnd_toEndOf="@+id/view8"
+                        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_servicefeeinlcvat_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="€0.00"
+                        android:textColor="@color/grey"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/view11"
+                        app:layout_constraintEnd_toEndOf="@+id/view9"
+                        app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_dateofbooking_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="2021-09-15"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_dateicon_imageview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_dateicon_imageview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_dateicon_imageview"
+                        app:layout_constraintVertical_bias="0.45" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_fromkeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="from"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_dateofbooking_textview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_dateofbooking_textview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_dateofbooking_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_tokeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="to"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_starttime_textview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_starttime_textview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_starttime_textview"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_starttime_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="09:00"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_fromkeyword_textview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_fromkeyword_textview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_fromkeyword_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_endtime_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="17:00"
+                        android:textColor="@color/lightBlue"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/venueinstantbooking_tokeyword_textview"
+                        app:layout_constraintStart_toEndOf="@+id/venueinstantbooking_tokeyword_textview"
+                        app:layout_constraintTop_toTopOf="@+id/venueinstantbooking_tokeyword_textview" />
+
+                    <View
+                        android:id="@+id/venueinstantbooking_viewaddressNdate_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0.50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_venueaddress_textview" />
+
+                    <View
+                        android:id="@+id/venueinstantbooking_dateNroomname_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0.50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_starttime_textview" />
+
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="0dp"
+                        android:layout_height="0.50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_roomrentalkeyword_textview" />
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="0dp"
+                        android:layout_height="0.50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_totalexctaxkeyword_textview" />
+
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="0dp"
+                        android:layout_height="0.50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_totaltaxkeyword_textview" />
+
+                    <View
+                        android:id="@+id/view11"
+                        android:layout_width="0dp"
+                        android:layout_height="0.50dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_servicefeeinlcvatkeyword_textview" />
+
+                    <View
+                        android:id="@+id/view7"
+                        android:layout_width="0dp"
+                        android:layout_height="0.50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_servicefeeexclvatkeyword_textview" />
+
+                    <View
+                        android:id="@+id/venueinstantbooking_roomnameNroomrental_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0.50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_roomname_textview" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/venueinstantbooking_totalinctaxlayout_constraintlayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/totalprice_instantbookingprocess"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view11">
+
+                        <TextView
+                            android:id="@+id/venueinstantbooking_totalincltaxkeyword_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/roboto_regular"
+
+                            android:text="Total incl. tax:"
+                            android:textColor="@color/lightBlue"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/venueinstantbooking_totalfeeinlcvat_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="€1,099.65"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venueinstantbooking_meetingdetails_constraintlayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/instantbooking_cards"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_finalizeyourreservationkeyword_textview">
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_meetingdetailskeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Meeting Details"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_meetingnamekeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Meeting Name"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_meetingdetailskeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_meetingdetailskeyword_textview" />
+
+                    <EditText
+                        android:id="@+id/venueinstantbooking_meetingname_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/edittext_instantbookingprocess"
+                        android:ems="10"
+                        android:hint="Meeting Name"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColorHint="@color/lightgrey"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_meetingnamekeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_meetingnamekeyword_textview" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venueinstantbooking_billingdetails_constraintlayout"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/instantbooking_cards"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_contactdetails_constraintlayout">
+
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_citykeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="City"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_zipcode_edittext"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_zipcode_edittext" />
+
+                    <!--                <EditText-->
+                    <!--                    android:id="@+id/venueinstantbooking_country_edittext"-->
+                    <!--                    android:layout_width="0dp"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginTop="8dp"-->
+                    <!--                    android:layout_marginEnd="24dp"-->
+                    <!--                    android:layout_marginRight="24dp"-->
+                    <!--                    android:layout_marginBottom="24dp"-->
+                    <!--                    android:background="@drawable/edittext_instantbookingprocess"-->
+                    <!--                    android:ems="10"-->
+                    <!--                    android:inputType="textPersonName"-->
+                    <!--                    android:minHeight="48dp"-->
+                    <!--                    android:hint="Country"-->
+                    <!--                    android:textColorHint="@color/lightgrey"-->
+                    <!--                    android:textSize="13sp"-->
+                    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                    app:layout_constraintHorizontal_bias="1.0"-->
+                    <!--                    app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_countrykeyword_textview"-->
+                    <!--                    app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_countrykeyword_textview" />-->
+
+                    <Spinner
+                        android:id="@+id/venueinstantbooking_country_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/spinner_bg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/venueinstantbooking_city_edittext"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_countrykeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_countrykeyword_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_countrykeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Country"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_city_edittext"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_city_edittext" />
+
+                    <EditText
+                        android:id="@+id/venueinstantbooking_city_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/edittext_instantbookingprocess"
+                        android:ems="10"
+                        android:hint="City"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColorHint="@color/lightgrey"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_citykeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_citykeyword_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_addresslinetwokeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Address Line 2"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_addresslineone_edittext"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_addresslineone_edittext" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_zipcodekeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Zip Code"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_addresslinetwo_edittext"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_addresslinetwo_edittext" />
+
+                    <EditText
+                        android:id="@+id/venueinstantbooking_addresslinetwo_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/edittext_instantbookingprocess"
+                        android:ems="10"
+                        android:hint="Address line 2"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColorHint="@color/lightgrey"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_addresslinetwokeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_addresslinetwokeyword_textview" />
+
+                    <EditText
+                        android:id="@+id/venueinstantbooking_addresslineone_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/edittext_instantbookingprocess"
+                        android:ems="10"
+                        android:hint="Address line 1"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColorHint="@color/lightgrey"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_addresslineonekeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_addresslineonekeyword_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_addresslineonekeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Address Line 1"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_billingdetailskeywork_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_billingdetailskeywork_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_billingdetailskeywork_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Billing Details"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/venueinstantbooking_zipcode_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/edittext_instantbookingprocess"
+                        android:ems="10"
+                        android:hint="Zip Code"
+                        android:inputType="textPostalAddress"
+                        android:minHeight="48dp"
+                        android:textColorHint="@color/lightgrey"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_zipcodekeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_zipcodekeyword_textview" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/venueinstantbooking_contactdetails_constraintlayout"
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/instantbooking_cards"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_meetingdetails_constraintlayout">
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_lastnamekeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Last Name"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_contactdetailskeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_firstname_edittext" />
+
+                    <EditText
+                        android:id="@+id/venueinstantbooking_lastname_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/edittext_instantbookingprocess"
+                        android:ems="10"
+                        android:hint="Last Name"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColorHint="@color/lightgrey"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_firstnamekeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_lastnamekeyword_textview" />
+
+                    <EditText
+                        android:id="@+id/venueinstantbooking_firstname_edittext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/edittext_instantbookingprocess"
+                        android:ems="10"
+                        android:hint="First Name"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:textColorHint="@color/lightgrey"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_firstnamekeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_firstnamekeyword_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_firstnamekeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="First Name"
+                        android:textColor="@color/lightgrey"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="@+id/venueinstantbooking_contactdetailskeyword_textview"
+                        app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_contactdetailskeyword_textview" />
+
+                    <TextView
+                        android:id="@+id/venueinstantbooking_contactdetailskeyword_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Contact Details"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/logosmall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/venueinstantbooking_agreeingtoterms_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/AgreeWithTermsBooking"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#00ffffff"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_billingdetails_constraintlayout" />
+
+                <Button
+                    android:id="@+id/venueinstantbooking_booknowbutton_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/search_button_bg"
+                    android:text="Book Now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/venueinstantbooking_agreeingtoterms_textview" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.meetingselect.meetingselect.HelperClasses.CustomScrollView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

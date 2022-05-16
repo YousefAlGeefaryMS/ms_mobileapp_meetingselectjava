@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MeetingSelect</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="my_requests">My Requests</string>
+    <string name="settings">Settings</string>
+    <string name="dashdate">\" - \"</string>
+    <string name="amsterdam">Amsterdam</string>
+
+
+    <string-array name="bookingType">
+        <item>All Type of Bookings</item>
+        <item>Request for Proposal</item>
+        <item>Instant Booking</item>
+        <item>Workspace</item>
+    </string-array>
+
+    <string-array name="orientation">
+        <item>Theater</item>
+        <item>School</item>
+        <item>UShape</item>
+        <item>Diner</item>
+        <item>Reception</item>
+        <item>Cabaret</item>
+        <item>Carret</item>
+    </string-array>
+
+    <string name="AgreeWithTermsLogin">By logging in you are agreeing with our <a href="https://www.meetingselect.com/en/General-Conditions"><font color="#119AFD">General Conditions</font></a> and <a href="https://www.meetingselect.com/en/Privacy-Policy"><font color="#119AFD">Privacy Statement</font></a>.</string>
+    <string name="AgreeWithTermsRegister">By registering to MeetingSelect you are agreeing with our <a href="https://www.meetingselect.com/en/General-Conditions"><font color="#119AFD">General Conditions</font></a> and <a href="https://www.meetingselect.com/en/Privacy-Policy"><font color="#119AFD">Privacy Statement</font></a>.</string>
+    <string name="AgreeWithTermsBooking">By booking this venue you are agreeing with our <a href="https://www.meetingselect.com/en/General-Conditions"><font color="#119AFD">General Conditions</font></a> and <a href="https://www.meetingselect.com/en/Privacy-Policy"><font color="#119AFD">Privacy Statement</font></a>.</string>
+
+
+</resources>
